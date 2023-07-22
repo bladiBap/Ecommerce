@@ -1,0 +1,35 @@
+.toast {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    color: #ffffff;
+    display: flex;
+    visibility: hidden;
+    z-index: 1000;
+    background-color: #3dc44a;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 300px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.showToast {
+    visibility: visible;
+    background-color: #3dc44a;
+    transition: 2s;
+}
+
+.hideToast {
+    visibility: hidden;
+    background-color: #f9f9f9;
+    transition: 2s;
+}
+
+@media screen and (max-width: 400px) {
+    .toast {
+        width: 240px;
+        font-size: 13px;
+    }
+}
+

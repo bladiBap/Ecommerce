@@ -1,0 +1,341 @@
+.modal{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0,0,0,0.6);
+    /* ver despues *Animacion* */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s 0.7s;
+    --transform: translateY(-100vh);
+    --transition: transform 0.6s;
+}
+
+.show-modal{
+    /* ver despues *Animacion* */
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 0.4s;
+    --transform: translateY(0);
+    --transition: transform 0.6s 0.6s;
+}
+
+.container-modal{
+    display: inline-flex;
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.container-image {
+    width: 50%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-image img{
+    /* width: 100%;
+    height: 100%; */
+    max-height: 250px;
+    border-radius: 10px;
+    background-color: rgb(234, 234, 235);
+}
+
+.modal-information{
+    width: 50%;
+    padding: 40px 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.modal-information h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal-information p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* .container-cantidad {
+    margin-bottom: 10px; 
+} */
+
+.container-cantidad > *{
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.container-botones{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.container-botones button{
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* modal eliminar */
+.container-modal-del{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 950px;
+    width: 400px;
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+
+/* modal eliminar */
+
+.container-modal-del h1{
+    text-align: center;
+    font-size: 20px;
+}
+
+.container-botones-delete{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.container-botones-delete button{
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* modal pagar */
+
+.container-modal-pagar{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 950px;
+    width: 400px;
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    padding: 10px;
+
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.container-inputs-pay{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.container-inputs-pay > div{
+    width: 49%;
+}
+
+.container-inputs-pay input{
+    width: 100%;
+}
+
+.container-modal-pagar input{
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.borderNone{
+    border: none;
+}
+
+.metodosPago{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.metodosPago > *{
+    margin-right: 10px;
+}
+
+.visa{
+    width: 40px;
+    height: 40px;
+}
+
+.card{
+    width: 40px;
+    height: 27px;
+}
+
+.ame{
+    width: 40px;
+    height: 40px;
+}
+.payTotal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.payTotal h3{
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 130px;
+}
+.payTotal p{
+    margin: 0px 5px;
+}
+
+.botones_confirm_pay{
+    display: flex;
+    align-items: center;
+}
+
+.botones_confirm_pay > *{
+    margin-left: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.error{
+    border: 2px solid rgba(240, 80, 80, 0.81);
+    
+}
+
+form > span {
+    margin: 0px;
+    padding: 0px 5px;
+}
+
+
+
+/* modal pagar */
+
+
+
+
+
+
+
+@media screen and ( max-width: 660px){
+    .container-modal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .modal-information {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .container-image {
+        width: 100%;
+        padding: 10px;
+        background: white;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .modal-information h1{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .modal-information p{
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    
+    .container-cantidad {
+        margin-bottom: 10px;
+    }
+    
+    .container-cantidad > *{
+        margin-right: 10px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+}
+
+@media screen and ( max-width: 440px){
+    .container-modal-del{
+        width: 230px;
+    }
+
+    .container-modal-del h1{
+        font-size: 11px;
+    }
+    
+    .container-botones-delete button{
+        padding: 5px 5px;
+        font-size: 9px;
+    }
+}
+
+@media screen and ( max-width: 440px){
+    .container-modal-del{
+        width: 230px;
+    }
+
+    .container-modal-del h1{
+        font-size: 11px;
+    }
+    
+    .container-botones-delete button{
+        padding: 5px 5px;
+        font-size: 9px;
+    }
+
+    .container-image img {
+        width: 160px;
+    }
+}
+
+@media screen and ( max-width: 350px){z
+
+    .container-image img {
+        width: 130px;
+    }
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/admin.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/aside.css">
+    <link rel="stylesheet" href="../style/modal-detail.css">
+    <link rel="stylesheet" href="../style/venta.css">
+    <link rel="stylesheet" href="../style/toast.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body onload="cargarProductos()">
+    <div class="toast" id="toast">Este es un mensaje de toast</div>
+
+    <div class="container">
+        <div class="container_options" id="container_options">
+
+            <div class="options_admin">
+                <h1>Administracion <span class="material-symbols-outlined">
+                        manage_accounts
+                    </span></h1>
+                <button onclick="cargarProductos()">Productos</button>
+                <button onclick="compras()">Todas las compras</button>
+                <button onclick="listaClientes()">Lista Clientes</button>
+                <button onclick="cerrarAdmin()">Cerrar Sesion</button>
+            </div>
+        </div>
+        <div class="view">
+            <div class="head">
+                <h1 id="titleHead">Productos</h1>
+                <button id="head" onclick="adicionar()">Añadir</button>
+            </div>
+            <div class="view-products" id="view-products">
+
+            </div>
+        </div>
+    </div>
+
+    <section class="modal" id="modal">
+        <div class="container-modal" id="container-modal">
+            <div class="container-image">
+                <img class="preview" id="preview" src="#" alt="Imagen Producto">
+            </div>
+            <div class="modal-information" id="ModalInformation">
+                <h1>Producto</h1>
+                <input type="text" id="nombre" placeholder="Nombre">
+                <span id="spanNombre">Nombre invalido</span>
+
+                <textarea id="descripcion" style="width: 100%;height: 100px; resize: none;"
+                    placeholder="Descripcion"></textarea>
+                <span id="spanDescripcion">Descripcion invalida</span>
+
+                <div>
+                    <label>Categoria</label>
+                    <select id="categorias"></select>
+                </div>
+                <span id="spanCategoria">Categoria invalida</span>
+
+                <div class="container-cantidad">
+                    <label for="precio" style="width: 95px;display: flex;">Precio Bs.</label>
+                    <input type="number" id="precio" step="0.01" min="0.01" max="10000" name="precio" value="1">
+                </div>
+                <span id="spanPrecio">Precio invalido</span>
+
+                <div class="container-cantidad">
+                    <label for="Cantidad" style="width: 75px;display: flex;">Cantidad</label>
+                    <input type="number" placeholder="Cantidad" id="cantidad" max="100" min="1" value="1"
+                        style="width: 150px;">
+                </div>
+                <span id="spanCantidad">Cantidad invalida</span>
+
+                <div>
+                    <input type="file" id="imagenProducto" onchange="previewImage(event)">
+                </div>
+                <!-- <p id="errorLoadImage" class="disNone">Cargue una imagen</p> -->
+                <span id="spanImagen">Imagen invalida</span>
+                <div class="container-botones">
+                    <button id="btnAcept" style="background-color: rgb(93, 152, 215);" onclick="saveModal()">Agregar</button>
+                    <button style="background-color: rgb(17, 111, 234);" onclick="closeModal()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal" id="modal-confirm">
+        <div class="container-modal-del" id="container-modal-delete" style="padding: 5px;">
+
+        </div>
+    </section>
+
+    <script src="javascript/admin.js"></script>
+</body>
+
+</html>

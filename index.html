@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/navegation.css">
+    <link rel="stylesheet" href="style/aside.css">
+    <link rel="stylesheet" href="style/modal-detail.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/venta.css">
+    <link rel="stylesheet" href="style/toast.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>Electro Line</title>
+</head>
+
+
+
+<body class="container-grid" onload="cargarProductos();cargarCategorias()">
+    <!--Para la navegacion entre paginas-->
+    <header class="header" id="header">
+        <ul class="radius">
+            <li class="navegation-item"><img src="images/logoSinFondo.png" alt=""></li>
+
+            <li class="menu-mobile"><a href="pages/quienes-somos.html"><span
+                        class="material-symbols-outlined">diversity_3</span></a> </li>
+            <li class="navegation-item"><a href="pages/quienes-somos.html">¿Quienes somos?</a></li>
+
+            <li class="menu-mobile"><a href="index.html"><span class="material-symbols-outlined icon">store</span></a>
+            </li>
+            <li class="navegation-item"><a href="index.html">Tienda</a></li>
+
+            
+
+            <div id="withUser">
+                <li class="menu-mobile" onclick="logout()"><span class="material-symbols-outlined icon">logout</span>
+                </li>
+                <li class="navegation-item"> <button class="border-none-radius button" onclick="logout()">Cerrar
+                        Sesion<span class="material-symbols-outlined">logout</span></button></li>
+            </div>
+
+            <div id="withoutUser">
+                <li class="menu-mobile"><a href="pages/login.html"><span
+                            class="material-symbols-outlined icon">account_circle</span></a></li>
+                <li class="navegation-item"> <button class="border-none-radius button" onclick="toLogin()">Iniciar
+                        Sesion<span class="material-symbols-outlined">account_circle</span></button> </li>
+            </div>
+
+            <li class="menu-mobile" onclick="showMenuMobile()"><span class="material-symbols-outlined">lists</span></li>
+        </ul>
+    </header>
+    <!--Para la navegacion en el contenido-->
+    <aside class="aside radius" id="aside">
+        <span class="material-symbols-outlined" onclick="closeMenuMobile()">close</span>
+        <ul>
+            <li> <button class="border-none-radius" onclick="cargarProductos()">Todos los productos</button> </li>
+            <li>Categorias</li>
+        </ul>
+        <ul id="Categorias">
+
+        </ul>
+        <ul>
+            <li> <button class="border-none-radius" onclick="toCarrito()"><span
+                        class="material-symbols-outlined">shopping_cart</span>Carrito</button> </li>
+
+            <li class=""><button class="border-none-radius" id="ventas" onclick="toVentas()"><span
+                        class="material-symbols-outlined">library_books</span>Ventas</button> </li>
+
+        </ul>
+    </aside>
+    <!--Para la visualizacion del contenido-->
+    <main class="main radius" id="main">
+        <div class="options" id="options">
+            <h2 id="nombreCategoria">Todos los productos</h2>
+            <div class="container-botones-options" id="infoCarrito">
+
+            </div>
+        </div>
+        <div class="view-products" id="view-products">
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Electro-Line. Todos los derechos reservados</p>
+        <div>
+            <img src="images/icons/facebook.png" alt="">
+            <img src="images/icons/gmail.png" alt="">
+            <img src="images/icons/instagram.png" alt="">
+            <img src="images/icons/twitter.png" alt="">
+            <img src="images/icons/whatsapp.png" alt="">
+        </div>
+    </footer>
+
+    <section class="modal" id="modal">
+        <div class="container-modal" id="container-modal">
+
+        </div>
+    </section>
+
+    <section class="modal" id="modal-confirm">
+        <div class="container-modal-del" id="container-modal-delete" style="padding: 5px;">
+
+        </div>
+    </section>
+
+    <section class="modal" id="modal-pagar">
+        <div class="container-modal-pagar" id="container-modal-pagar">
+            <h1>Proceso de pago</h1>
+            <input class="borderNone" type="text" id="tarjeta" maxlength="19" placeholder="Nro de Trajeta">
+            <span id="spanNroTarjeta">Tarjeta invalida</span>
+
+            <div class="container-inputs-pay">
+                <div>
+                    <input class="borderNone" type="text" id="expiracion" maxlength="7" placeholder="MM/YYYY">
+                    <span id="spanFechaExpiracion">Fecha invalida</span>
+                </div>
+
+                <div>
+                    <input class="borderNone" type="text" id="cvv" maxlength="3" placeholder="CVV">
+                    <span id="spanCvv">CVV invalido</span>
+                </div>
+            </div>
+            <div class="metodosPago">
+                <img class="visa" src="images/tarjetas/visa.png" alt="" onclick="selectMetodo()">
+                <img class="card" src="images/tarjetas/card.png" alt="" onclick="selectMetodo()">
+                <img class="ame" src="images/tarjetas/american-express.png" alt="" onclick="selectMetodo()">
+            </div>
+            <h3>Lista de Compra</h3>
+            <div id="listaCompra" class="listaContainerCompra">
+
+            </div>
+
+            <div class="payTotal">
+                <h3>TOTAL: <p id="totalPagar"> 9898 </p> Bs.</h3>
+                <div class="botones_confirm_pay">
+                    <button class="button" onclick="pagar()">Pagar</button>
+                    <button class="button" onclick="closeModalPagar()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="toast" id="toast">Este es un mensaje de toast</div>
+    <script src="javascript/main.js"></script>
+</body>
+
+
+</html>

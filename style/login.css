@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chivo', sans-serif;
+}
+
+body {
+    display: inline;
+    overflow: hidden;
+    position: relative;
+}
+
+.main_container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo_container {
+    width: 40%;
+    height: 100%;
+}
+
+.form_container {
+    width: 60%;
+    height: 100%;
+    display: block;
+}
+
+.logo_simple_container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+.container_input {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 25px;
+    position: relative;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-right: 30px;
+}
+
+.container_input input {
+    width: 70%;
+    min-width: 335px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    background-color: aliceblue;
+    min-width: 200px;
+}
+
+input[type="button"] {
+    width: 55%;
+    min-width: 200px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #1E90FF;
+    color: white;
+}
+
+span {
+    margin-right: 5px;
+}
+
+.crear_cuenta_container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo_simple_container img {
+    height: 180px;
+    width: 500px;
+}
+
+.divForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    max-width: 600px;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.errorLogin {
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+
+
+/* modalregister */
+
+.container-modal-register {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 400px;
+    min-width: 250px;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: relative;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.formRegister {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+}
+
+.formRegister * {
+    font-size: 15px;
+}
+
+.formRegister>label,
+.formRegister>input {
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 5px;
+    border-color: white;
+}
+
+.formRegister>input {
+    border: 1px solid #afafaf;
+}
+
+.subirNewUser {
+    width: 100%;
+    padding: 0px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+/* modalregister */
+
+/* button  visbility passowrd */
+.visibility {
+    position: absolute;
+    right: 0px;
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+/* button  visbility passowrd */
+
+.container_password {
+    width: 100%;
+    position: relative;
+}
+
+.container_password>input {
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 5px;
+    border-color: white;
+    border: 1px solid #afafaf;
+
+}
+
+.container_password>span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+
+.container-modal-register h1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.disNone {
+    visibility: hidden;
+}
+
+.disVisible {
+    visibility: visible;
+}
+
+.newUser:hover {
+    cursor: pointer;
+    color: #1E90FF;
+}
+
+.soyAdmin{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.soyAdmin > input{
+    margin-right: 10px;
+}
+
+@media (max-width: 870px) {
+    .logo_container {
+        display: none;
+    }
+
+    .form_container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 510px) {
+    .logo_container {
+        display: none;
+    }
+
+    .form_container {
+        width: 100%;
+    }
+
+    .logo_simple_container img {
+        width: 330px;
+        height: 120px;
+    }
+
+    form *,
+    .crear_cuenta_container {
+        font-size: 14px;
+    }
+
+
+
+    .visibility {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container_input {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .container_input input {
+        width: 100%;
+    }
+
+    .container_input .visibility {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 510px) {
+    .crear_cuenta_container {
+        font-size: 12px;
+    }
+}

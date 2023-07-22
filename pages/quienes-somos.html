@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/information.css">
+    <link rel="stylesheet" href="../style/navegation.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/aside.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="container-grid-nav1">
+    <!--Para la navegacion entre paginas-->
+    <header class="header" id="header">
+        <ul class="radius">
+            <li class="navegation-item"><img src="../images/logoSinFondo.png" alt=""></li>
+
+            <li class="menu-mobile"><a href="../pages/quienes-somos.html"><span
+                        class="material-symbols-outlined">diversity_3</span></a> </li>
+            <li class="navegation-item"><a href="../pages/quienes-somos.html">¿Quienes somos?</a></li>
+
+            <li class="menu-mobile"><a href="../index.html"><span
+                        class="material-symbols-outlined icon">store</span></a> </li>
+            <li class="navegation-item"><a href="../index.html">Tienda</a></li>
+
+            <!-- <li class="menu-mobile"><a href="../pages/login.html"><span
+                        class="material-symbols-outlined icon">account_circle</span></a></li>
+            <li class="navegation-item"> <button class="border-none-radius button" onclick="toLogin()">Iniciar Sesion
+                    <span class="material-symbols-outlined">account_circle</span></button> </li>
+            -->
+            <div id="withUser">
+                <li class="menu-mobile" onclick="logout()"><span class="material-symbols-outlined icon">logout</span>
+                </li>
+                <li class="navegation-item"> <button class="border-none-radius button" onclick="logout()">Cerrar
+                        Sesion<span class="material-symbols-outlined">logout</span></button></li>
+            </div>
+
+            <div id="withoutUser">
+                <li class="menu-mobile"><a href="pages/login.html"><span
+                            class="material-symbols-outlined icon">account_circle</span></a></li>
+                <li class="navegation-item"> <button class="border-none-radius button" onclick="toLogin()">Iniciar
+                        Sesion<span class="material-symbols-outlined">account_circle</span></button> </li>
+            </div>
+        </ul>
+    </header>
+
+    <!--Informacion-->
+
+    <main class="information">
+
+        <div class="slider">
+            <h1>
+                Lo mejor para el hogar
+            </h1>
+        </div>
+
+        <div class="container-objetivos">
+            <div class="item-objetivos">
+                <img src="../images/mision.jpg" alt="">
+                <div class="content-item">
+                    <h1>Misión</h1>
+                    <p>Nuestra empresa se dedica a ofrecer productos de alta calidad y tecnología de vanguardia en
+                        electrodomésticos,
+                        televisores y aires acondicionados para el hogar. Buscamos superar las expectativas de nuestros
+                        clientes
+                        ofreciendo
+                        una amplia variedad de productos y servicios, junto con una atención al cliente excepcional que
+                        garantice la
+                        satisfacción del cliente en todo momento.</p>
+                </div>
+
+            </div>
+            <div class="item-objetivos reverse">
+                <img src="../images/vision.jpg" alt="">
+                <div class="content-item">
+                    
+                    <h1>Visión</h1>
+                    <p>Queremos ser la empresa líder en la venta de electrodomésticos, televisores y aires
+                        acondicionados en
+                        el
+                        mercado nacional e internacional. Deseamos que nuestros clientes confíen en nosotros como su
+                        principal
+                        proveedor
+                        de soluciones para el hogar, brindando productos y servicios de alta calidad a precios
+                        competitivos.</p>
+                </div>
+
+            </div>
+            <div class="item-objetivos">
+                <img src="../images/nosotros.jpg" alt="">
+                <div class="content-item">
+                    <h1>Nosotros</h1>
+                    <p>Nuestra empresa se enfoca en ofrecer electrodomésticos, televisores y aires acondicionados de
+                        alta
+                        calidad
+                        de marcas
+                        reconocidas en el mercado. Ofrecemos una amplia variedad de productos, desde refrigeradores y
+                        lavadoras
+                        hasta
+                        televisores de pantalla grande y sistemas de aire acondicionado de última generación.</p>
+                </div>
+            </div>
+        </div>
+
+        <h1>Ubicaciones</h1>
+
+        <div class="ubication-container">
+            <div class="ubication-item">
+                <img src="../images/sc.jpg" alt="">
+                <h1>Santa Cruz de la Sierra</h1>
+                <p>
+                    La ciudad de Santa Cruz de la Sierra es la capital del departamento de Santa Cruz
+                    y es uno de los principales centros económicos del país. Electro-Line se ubica en una zona comercial
+                    y
+                    céntrica de la ciudad, en la avenida San Martín entre y 3er Anillo.
+                </p>
+            </div>
+            <div class="ubication-item">
+                <img src="../images/lpz.jpg" alt="">
+                <h1>La Paz</h1>
+                <p>
+                    Como capital administrativa de Bolivia, La Paz es un importante centro financiero, comercial y
+                    cultural del país. Electro-Line tiene una tienda en la zona comercial de la ciudad, avenida Arce.
+                </p>
+            </div>
+            <div class="ubication-item">
+                <img src="../images/cbb.jpg" alt="">
+                <h1>Cochabamba</h1>
+                <p>
+                    La ciudad de Cochabamba es la tercera ciudad más poblada de Bolivia y es un importante
+                    centro comercial y turístico del país. Electro-Line esta ubicada en la zona céntrica y comercial de
+                    la
+                    ciudad, avenida Ballivián y calle 25 de Mayo.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Electro-Line. Todos los derechos reservados</p>
+        <div>
+            <img src="../images/icons/facebook.png" alt="">
+            <img src="../images/icons/gmail.png" alt="">
+            <img src="../images/icons/instagram.png" alt="">
+            <img src="../images/icons/twitter.png" alt="">
+            <img src="../images/icons/whatsapp.png" alt="">
+        </div>
+    </footer>
+    <script src="../javascript/quienesSomos.js"></script>
+</body>
+
+</html>

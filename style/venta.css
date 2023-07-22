@@ -1,0 +1,64 @@
+.venta-container{
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.item-venta{
+    background-color: #fff;
+    padding: 5px 0px;
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+    overflow-y: auto;
+    min-height: 350px;
+    max-height: 350px;
+}
+
+.item-producto-venta{
+    
+    width: 300px;
+    min-width: 300px;
+    height: 100%;
+}
+
+.view-products{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.factura-fecha{
+    font-size: 18px;
+    padding: 5px;
+    display: flex;
+}
+
+.factura-fecha p{
+    margin-left: 20px;
+}
+
+.client_list_item{
+    height: 300px;
+    background-color: rgb(195, 197, 197);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+@media screen and ( max-width: 380px){
+    .item-venta{
+        min-height: 250px;
+        max-height: 250px;
+    }
+}
+
+
+

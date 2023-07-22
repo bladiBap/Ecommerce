@@ -1,0 +1,97 @@
+.aside ul > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+
+aside ul li button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+    background-color: #79C3EC;
+    cursor: pointer;
+    
+}
+
+
+aside ul li button:hover {
+    box-shadow: 10px 10px 10px rgba(63, 64, 63, 0.4);
+    border-radius: 5px;
+    transition: 0.7s;
+}
+
+aside ul li button:not(:hover):not(:focus) {
+    transition: 0.7s;
+}
+
+aside ul li button span{
+    margin-right: 10px;
+}
+
+.aside ul li button:hover{
+    background-color: #5C8DA9;
+    color: #fff;
+}
+
+.aside > span {
+    display: none;
+}
+
+.ocultar{
+    display: none;
+}
+
+
+@media screen and ( max-width: 1065px){
+    .aside{
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .show-menu-categories{
+        opacity: 1;
+        pointer-events: unset;
+        visibility: visible;
+        transition: all 0.5s ease-in-out;
+        z-index: 1;
+    }
+
+    .desableClickAll{
+        pointer-events: none;
+    }
+
+    .close-menu-categories{
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .container-grid aside{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 240px;
+        margin: 10px;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+    .aside > span{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        display: block;
+    }
+    .aside > span:hover{
+        cursor: pointer;
+    }
+    .aside span+ul{
+        margin-top: 25px;
+    }
+}
+
+

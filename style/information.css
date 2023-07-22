@@ -1,0 +1,288 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chivo', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+.container-grid-nav1 {
+
+    display: grid;
+    gap : 6px;
+    padding: 10px;
+    grid-template:
+    "header header" auto
+    "information information" 1fr
+    "footer footer" 50px /
+    320px auto;
+    background-color: #fff;
+}
+
+.information {
+    grid-area: information;
+    padding: 5px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.container-grid-nav1 > *{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.container-banner{
+    width: 100%;
+    height: 240px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+.information h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.information p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ubication-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 20px;
+    width: 100%;
+}
+
+.ubication-item{
+    display: flex;
+    padding: 10px;
+    width: 400px;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgb(158, 191, 231);
+}
+
+.container-objetivos{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-objetivos img{
+    width: 35%;
+    max-width: 400px;
+    min-width: 220px;
+    height: 35%;
+    max-height: 400px;
+    min-height: 220px;
+    object-fit: cover;
+}
+
+
+.ubication-item img{
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.item-objetivos{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.content-item{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.border-none-radius{
+    border-radius: 5px;
+    border: none;
+}
+
+.slider{
+    background-image: url(../images/slider/sl1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+    animation: animate 15s infinite;
+    position: relative;
+
+}
+
+.slider h1{
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 700px;
+    position: absolute;
+    right: 10px;
+    margin: 0px;
+    bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+
+@keyframes animate {
+    25%{
+        background-image: url(../images/slider/sl4.jpg);
+        background-size: cover;
+    }
+    
+    50%{
+        background-image: url(../images/slider/sl3.jpg);
+        background-size: cover;
+    }
+    
+    75%{
+        background-image: url(../images/slider/sl2.jpg);
+        background-size: cover;
+    }
+    
+    100%{
+        background-image: url(../images/slider/sl1.jpg);
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .container-banner{
+        height: 180px
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .information p {
+        font-size: 20px
+    }
+    .slider h1{
+        width: 500px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .container-grid-nav1 {
+        grid-template:
+        "header header" auto
+        "information information" 1fr
+        "footer footer" 40px /
+         auto auto;
+    }
+
+    .information p{
+        font-size: 21px;
+    }
+
+    .ubication-item{
+        width: 300px;
+    }
+
+    .item-objetivos{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .information p, .content-item p{
+        font-size: 18px;
+    }
+
+    .information h1, .content-item h1 {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .container-banner{
+        height: 100px
+    }
+    .slider h1{
+        width: 300px;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    .slider{
+        width: 100%;
+        height: 300px;
+        border-radius: 5px;
+        animation: animate 15s infinite;
+        position: relative;
+    
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .information p, .content-item p{
+        font-size: 12px;
+    }
+
+    .ubication-item{
+        width: 210px;
+    }
+    .container-banner{
+        height: 60px
+    }
+    .slider h1{
+        width: 150px;
+        font-size: 10px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .information p, .content-item p{
+        font-size: 10px;
+    }
+}
+
+
+
